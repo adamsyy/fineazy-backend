@@ -13,7 +13,10 @@ const {balance}=require("../controller/balance.js")
 const router = require("express").Router();
 const {signup}=require("../controller/auth/signup")
 const {login}=require("../controller/auth/login")
-const {create_basket}=require("../controller/create_basket")
+const {create_basket}=require("../controller/basket/create_basket")
+const {show_basket}=require("../controller/basket/show_basket")
+const {users_basket}=require("../controller/basket/users_basket")
+
 
 router.get("/", getprice);
 router.get("/1", getprice1);
@@ -30,5 +33,7 @@ router.get("/balance",balance)
 router.post("/signup",signup)
 router.post("/login",login)
 router.post("/create_basket",create_basket)
+router.get("/show_basket",show_basket)
+router.get("/users_basket",users_basket)
 
 module.exports = router;
