@@ -18,12 +18,16 @@ module.exports.buy = async (req, res) => {
     
     async function salman(){
      try{
+      const total=req.body.total;
+      const min=req.body.min;
+      
       const data1 = await client2.order({
         symbol: 'BTCUSDT',
         side: 'BUY',
         quantity: '0.00041',
         price: '29600.00'
       })
+      res.send({data1});
      }catch(e){
        res.send(e.message)
      }
