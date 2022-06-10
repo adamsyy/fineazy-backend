@@ -11,6 +11,8 @@ const {historybtc}=require("../controller/historybtc")
 const {historyeth}=require("../controller/historyeth")
 const {balance}=require("../controller/balance.js")
 const router = require("express").Router();
+const {signup}=require("../controller/auth/signup")
+const {login}=require("../controller/auth/login")
 
 router.get("/", getprice);
 router.get("/1", getprice1);
@@ -24,6 +26,7 @@ router.post("/sell", sell);
 router.get("/historybtc", historybtc);
 router.get("/historyeth",historyeth)
 router.get("/balance",balance)
-
+router.post("/signup",signup)
+router.post("/login",login)
 
 module.exports = router;

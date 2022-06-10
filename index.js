@@ -17,15 +17,15 @@ const UserSchema= require("./model/Test");
 //   "APIKEY": 'tkvR0fxbBD8LeJotggSdnp1nzxip2DmOqJLR3cFQ4aYASydgjEB5cZiLKKmPGbIY',
 //   "APISECRET": 'DERLHx1KYhMNsyYOHwRrQ7rn60EBoeMRcOPYRqyE96fmnYjWvuAEQkRpFP67Ht0k'
 // });
-// mongoose  
-//   .connect(process.env.DATABASE, {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//   })
-//   .then(() => {
-//     console.log("DB Connected");
-//   });
-// const client = Binance()
+mongoose  
+  .connect("mongodb+srv://adam:adamsy@cluster0.qzknu.mongodb.net/?retryWrites=true&w=majority", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("DB Connected");
+  });
+const client = Binance()
 // async function salman(){
 //   const data = await client.prices();
 //   return data
