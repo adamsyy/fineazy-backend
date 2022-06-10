@@ -1,5 +1,5 @@
 const Binance=require('binance-api-node').default;
-
+const CreateBasket = require("../model/basket"); 
 
 
 
@@ -7,8 +7,11 @@ module.exports.create_basket = async (req, res) => {
 
     const coins=req.body.coins;
     const email=req.body.email;
-    
-    
+const basket=new CreateBasket({
+    email,coins
+})
+await basket.save()
+  res.send({basket})  
 
 
     // const client = Binance()
@@ -18,6 +21,6 @@ module.exports.create_basket = async (req, res) => {
     //   res.send(data);
     
     // }
-    salman().then(data=>{res.send(data)}).catch((e)=>{console.log(e)})
+   
     
 }
