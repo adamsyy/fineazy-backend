@@ -1,10 +1,11 @@
 const Binance=require('binance-api-node').default;
 const  dotenv=require('dotenv');
 const path = require("path");
+const bcrypt = require("bcryptjs");
 const UserSchema = require("..//../model/user");
 
 module.exports.signup = async (req, res) => {
-    const { email, password,name} = req.body;
+    var { email, password,name,api_key,api_secret} = req.body;
     try {
       const user = await UserSchema.findOne({ email });
       if (user) {
@@ -13,11 +14,17 @@ module.exports.signup = async (req, res) => {
           data: null,
         });
       }
+      api_secret=await bcrypt.hash(api_secret,8)
+      api_key=await bcrypt.hash(api_key,8)
+      api_secret=await bcrypt.hash(api_secret,8)
+      api_key=await bcrypt.hash(api_key,8)
+    
       const newUser = new UserSchema({
         email,
         password,
-     name,
+     name,api_key,api_secret
       });
+     
       await newUser.save();
    
       return res.status(201).json({

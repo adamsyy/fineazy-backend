@@ -5,8 +5,10 @@ const Binance=require('binance-api-node').default;
 
 module.exports.create_basket = async (req, res) => {
 
-    const coins=req.body;
-    github
+    const coins=req.body.coins;
+    const email=req.body.email;
+    
+    
 
 
     // const client = Binance()

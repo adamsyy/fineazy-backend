@@ -33,6 +33,7 @@ const client = Binance()
 // salman().then(data=>{console.log(data)}).catch((e)=>{console.log(e)})
 app.use(cors())
 app.use("/getprice", require("./routes/getprice"));
+app.use("/auth", require("./routes/auth"));
 
 
 const PORT = process.env.PORT || 5000;
