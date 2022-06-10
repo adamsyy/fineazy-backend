@@ -24,7 +24,7 @@ const User = new Schema({
 //   }
 //   return next();
 // });
-
+//s
 // User.methods.comparePassword = async function (candidatePassword) {
 //   try {
 //     let isMatch = await bcrypt.compare(candidatePassword, this.password);

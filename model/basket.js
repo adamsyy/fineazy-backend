@@ -3,6 +3,10 @@ const Schema = mongoose.Schema;
 const bcrypt = require("bcryptjs");
 
 const Basket = new Schema({
+    allocation: {
+        type: [String],
+      },
+      
     email:String,
     approved:{
         type:String,default:"false"
@@ -10,6 +14,10 @@ const Basket = new Schema({
     coins: {
         type: [String],
       },
+   min_amount:Number,
+   commission:Number,
+    description:String,
+    title:String,
 
 });
 
