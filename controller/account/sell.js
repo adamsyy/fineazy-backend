@@ -37,7 +37,7 @@ module.exports.sell = async (req, res) => {
        });
 
       }catch(e){
-        res.send({"staus":"fail"})
+        res.send({"status":"fail"})
       }
       
     

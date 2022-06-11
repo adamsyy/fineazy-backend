@@ -37,7 +37,7 @@ module.exports.buy = async (req, res) => {
 
       res.send({"status":"success",data1,data2});
      }catch(e){
-       res.send({"staus":"fail"})
+       res.send({"status":"fail"})
      }
  
       //29891.00
