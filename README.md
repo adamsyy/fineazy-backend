@@ -21,7 +21,7 @@ This repository is the backend for fin eazy rest api endoints<br/>
 <br/>
 the endpoints /buy,/sell,/balance,/historyeth,btc and balance requires you to be authenticated by providing your api key and api secret which you can get from your Binance account.
 <br/>
-Frontend of the project https://github.com/salmanpary/FinEazy
+
 
 <br/>
 <br/>
