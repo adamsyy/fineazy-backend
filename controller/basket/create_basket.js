@@ -12,7 +12,7 @@ module.exports.create_basket = async (req, res) => {
     const commission = req.body.commission;
     const description = req.body.description;
     const title = req.body.title;
-    const long_description = req.body.long_description;
+    const marketing_tagline = req.body.marketing_tagline;
 
     const basket = new CreateBasket({
         email,
@@ -22,7 +22,7 @@ module.exports.create_basket = async (req, res) => {
         description,
         commission,
         title,
-        long_description
+        marketing_tagline
     })
     
     await basket.save()

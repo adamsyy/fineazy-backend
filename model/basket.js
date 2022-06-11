@@ -19,7 +19,7 @@ const Basket = new Schema({
     description:String,
     title:String,
 
-    long_description:String,
+    marketing_tagline:String,
 });
 
 
