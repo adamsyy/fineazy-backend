@@ -16,14 +16,30 @@ module.exports.sell = async (req, res) => {
       
       
     async function salman(){
-      const data = await client2.order({
-        symbol: 'BTCUSDT',
-        side: 'SELL',
-        quantity: '0.00040',
-        price: '29721.00',
-      })
+      try{
+        const data = await client2.order({
+          symbol: 'BTCUSDT',
+          side: 'SELL',
+          quantity: '0.00041',
+          price: '29245.00',
+        })
+  
+        const data2 = await client2.order({
+          symbol: 'ETHUSDT',
+          side: 'SELL',
+          quantity: '0.0070',
+          price: '1670.00',
+        })
+        
+        
+       res.send({"status":"success",
+        data,data2
+       });
+
+      }catch(e){
+        res.send({"staus":"fail"})
+      }
       
-      return data
     
     }
     salman().then(data=>{res.send(data)}).catch((e)=>{res.status(500).send(e.message)})

@@ -20,16 +20,24 @@ module.exports.buy = async (req, res) => {
      try{
       const total=req.body.total;
       const min=req.body.min;
-      
+
       const data1 = await client2.order({
         symbol: 'BTCUSDT',
         side: 'BUY',
         quantity: '0.00041',
-        price: '29600.00'
+        price: '29245.00'
       })
-      res.send({data1});
+      const data2 = await client2.order({
+        symbol: 'ETHUSDT',
+        side: 'BUY',
+        quantity: '0.0070',
+        price: '1670.00'
+      })
+
+
+      res.send({"status":"success",data1,data2});
      }catch(e){
-       res.send(e.message)
+       res.send({"staus":"fail"})
      }
  
       //29891.00
