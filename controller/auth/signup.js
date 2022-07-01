@@ -14,14 +14,14 @@ module.exports.signup = async (req, res) => {
           data: null,
         });
       }
-      api_secret=await bcrypt.hash(api_secret,8)
-      api_key=await bcrypt.hash(api_key,8)
-      api_secret=await bcrypt.hash(api_secret,8)
-      api_key=await bcrypt.hash(api_key,8)
+      // api_secret=await bcrypt.hash(api_secret,8)
+      // api_key=await bcrypt.hash(api_key,8)
+      // api_secret=await bcrypt.hash(api_secret,8)
+      // api_key=await bcrypt.hash(api_key,8)
     
       const newUser = new UserSchema({
         email,
-        phone,
+  
         password,
      name,api_key,api_secret
       });

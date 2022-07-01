@@ -4,11 +4,9 @@ const bcrypt = require("bcryptjs");
 const Profile = new Schema({
   email: String,
   phone:String,
-
-
-  name: String,
   api_key:String,
-  api_secret:String
+  api_secret:String,
+  response:Object
 
 });
 

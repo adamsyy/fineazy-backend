@@ -8,6 +8,9 @@ const User = new Schema({
     type: String,
     required: true,
   },
+  friends: {
+    type: [String],
+  },
 
   name: String,
   api_key:String,

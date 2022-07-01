@@ -1,9 +1,11 @@
 const Binance=require('binance-api-node').default;
 const CreateBasket = require("../../model/basket"); 
+const ProfileSchema = require("../../model/profile"); 
 
 
 
 module.exports.users_portfolio = async (req, res) => {
+
 
     // const client = Binance({
     //   apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
@@ -61,13 +63,29 @@ for(var i=0;i<coin_names.length;i++){
     const coin_percentage=await client.dailyStats({ symbol: coin_names[i] });
     const  coin_percentage_change=coin_percentage["priceChangePercent"];
     sum_percentage=sum_percentage+coin_percentage_change;
-    coin[coin_names[i]]={
+    coin[i]={
+        name:coin_names[i],
         price:coin_prices[i],
         allocation:(coin_prices[i]/total_price)*100,
         percentage_change:coin_percentage_change
         
 
     }
+
+    const profile = new ProfileSchema({
+        email: req.body.email,
+        response:{
+            
+            "coin_prices_json":coin,
+
+            "total_amount":total_price,
+            "invested_amount":total_price- not_invested_value,
+            "sum_percentage":sum_percentage,
+        }
+      
+      });
+      profile.save();
+
 }
 
 
