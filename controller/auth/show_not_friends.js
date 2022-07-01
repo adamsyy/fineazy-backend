@@ -3,7 +3,7 @@ const Userschema = require("../../model/user");
 
 
 
-module.exports.show_friends = async (req, res) => {
+module.exports.show_not_friends = async (req, res) => {
 
     const users=await Userschema.find();
     var not_friends=[];
