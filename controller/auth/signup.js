@@ -21,6 +21,7 @@ module.exports.signup = async (req, res) => {
     
       const newUser = new UserSchema({
         email,
+        phone,
         password,
      name,api_key,api_secret
       });

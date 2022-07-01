@@ -16,6 +16,7 @@ const {login}=require("../controller/auth/login")
 const {create_basket}=require("../controller/basket/create_basket")
 const {show_basket}=require("../controller/basket/show_basket")
 const {users_basket}=require("../controller/basket/users_basket")
+const {users_portfolio}=require("../controller/basket/users_portfolio")
 
 
 router.get("/", getprice);
@@ -35,6 +36,7 @@ router.post("/login",login)
 router.post("/create_basket",create_basket)
 router.get("/show_basket",show_basket)
 router.post("/users_basket",users_basket)
+router.get("/users_portfolio",users_portfolio)
 
 
 module.exports = router;
