@@ -5,12 +5,16 @@ const CreateBasket = require("../../model/basket");
 
 module.exports.users_portfolio = async (req, res) => {
 
-    const client = Binance({
-      apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
-      apiSecret: "JmU2M67eYD9ZqBLMF8JH4R5XPpK8owoZHjkFcnNRFiIyVed87aVh5VuQmx7FHjC8",
-         getTime:()=> new client.time()
-      })
-
+    // const client = Binance({
+    //   apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
+    //   apiSecret: "JmU2M67eYD9ZqBLMF8JH4R5XPpK8owoZHjkFcnNRFiIyVed87aVh5VuQmx7FHjC8",
+    //      getTime:()=> new client.time()
+    //   })
+      const client = Binance({
+        apiKey: req.body.apikey,
+        apiSecret: req.body.apisecret,
+           getTime:()=> new client.time()
+        })
   
     var coin_names = [];
     var coin_prices = [];
