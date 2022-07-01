@@ -10,6 +10,7 @@ module.exports.users_portfolio = async (req, res) => {
     //   apiSecret: "JmU2M67eYD9ZqBLMF8JH4R5XPpK8owoZHjkFcnNRFiIyVed87aVh5VuQmx7FHjC8",
     //      getTime:()=> new client.time()
     //   })
+
       const client = Binance({
         apiKey: req.body.apikey,
         apiSecret: req.body.apisecret,
