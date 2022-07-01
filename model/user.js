@@ -11,7 +11,10 @@ const User = new Schema({
 
   name: String,
   api_key:String,
-  api_secret:String
+  api_secret:String,
+  total_balance:Number,
+  total_profit:Number,
+  percentage:Number,
 
 });
 
