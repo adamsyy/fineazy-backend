@@ -8,6 +8,7 @@ module.exports.remove_friend = async (req, res) => {
     var user=await Userschema.find({email:req.body.email});
  var friends=user[0].friends;
    user[0]["friends"]=friends.remove(req.body.friend);
+   user[0]["followers"]=user[0]["followers"]-1;
     await user[0].save();
 
     //add names to user.friends

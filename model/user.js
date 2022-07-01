@@ -11,6 +11,7 @@ const User = new Schema({
   friends: {
     type: [String],
   },
+  followers: Number,
 
   name: String,
   api_key:String,
