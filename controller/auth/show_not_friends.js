@@ -28,7 +28,7 @@ for(var i=0;i<not_friends.length;i++){
    
 }}catch(e){
     console.log(e);
-    res.status(500).send("error");
+    res.status(500).send(e);
 }
 
 //
