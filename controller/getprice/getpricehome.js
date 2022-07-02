@@ -26,30 +26,39 @@ module.exports.getpricehome = async (req, res) => {
 
     console.log(BNBUSDT)
     return {
-      "1": {
-        "BNBUSDT": data["BNBUSDT"],
+
+      "0": {
+        "name": "BNBUSDT",
+        "price": data["BNBUSDT"],
         "priceChangePercent": BNBUSDT["priceChangePercent"],
         "priceChange": BNBUSDT["priceChange"],
       },
 
-      "BTCUSDT": {
-        "BTCUSDT": data["BTCUSDT"],
+      "1": {
+
+        "name": "BTCUSDT",
+        "price": data["BTCUSDT"],
         "priceChangePercent": BTCUSDT["priceChangePercent"],
         "priceChange": BTCUSDT["priceChange"],
       },
-      "ETHUSDT": {
-        "ETHUSDT": data["ETHUSDT"],
+      "2":
+      {
+        "name": "ETHUSDT",
+        "price": data["ETHUSDT"],
         "priceChangePercent": ETHUSDT["priceChangePercent"],
         "priceChange": ETHUSDT["priceChange"],
       },
-
-      "SOLUSDT": {
-        "SOLUSDT": data["SOLUSDT"],
+      "3":
+      {
+        "name": "SOLUSDT",
+        "price": data["SOLUSDT"],
         "priceChangePercent": SOLUSDT["priceChangePercent"],
         "priceChange": SOLUSDT["priceChange"],
       },
-      "DOGEUSDT": {
-        "DOGEUSDT": data["DOGEUSDT"],
+      "4":
+      {
+        "name": data["DOGEUSDT"],
+        "price": data["DOGEUSDT"],
         "priceChangePercent": DOGEUSDT["priceChangePercent"],
         "priceChange": DOGEUSDT["priceChange"],
       },

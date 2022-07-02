@@ -10,6 +10,9 @@ const {sell}=require("../controller/account/sell")
 const {historybtc}=require("../controller/account/historybtc")
 const {historyeth}=require("../controller/account/historyeth")
 const {balance}=require("../controller/account/balance.js")
+const {buy_btc}=require("../controller/account/buy_btc")
+const {buy_eth}=require("../controller/account/buy_eth")
+
 const router = require("express").Router();
 const {signup}=require("../controller/auth/signup")
 const {login}=require("../controller/auth/login")
@@ -37,6 +40,8 @@ router.post("/create_basket",create_basket)
 router.get("/show_basket",show_basket)
 router.post("/users_basket",users_basket)
 router.post("/users_portfolio",users_portfolio)
+router.post("/buy_btc",buy_btc)
+router.post("/buy_eth",buy_eth)
 
 
 module.exports = router;

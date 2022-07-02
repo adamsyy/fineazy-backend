@@ -7,6 +7,7 @@ const {remove_friend}=require("../controller/auth/remove_friend")
 const {show_people}=require("../controller/auth/show_people")
 const {show_everyone}=require("../controller/auth/show_everyone")
 const {specific_user}=require("../controller/auth/specific_user")
+const {test}=require("../controller/auth/test")
 const router = require("express").Router();
 
 router.post("/signup",signup)
