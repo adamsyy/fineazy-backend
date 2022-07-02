@@ -15,6 +15,10 @@ const {buy_eth}=require("../controller/account/buy_eth")
 const {buy_allocation}=require("../controller/account/buy_allocation")
 const {upload_post}=require("../controller/account/upload_post")
 const {view_post}=require("../controller/account/view_post")
+const {user1}=require("../controller/basket/user1")
+const {user2}=require("../controller/basket/user2")
+const {user3}=require("../controller/basket/user3")
+const {user4}=require("../controller/basket/user4")
 
 const router = require("express").Router();
 const {signup}=require("../controller/auth/signup")
@@ -48,6 +52,10 @@ router.post("/buy_eth",buy_eth)
 router.get("/buy_allocation",buy_allocation)
 router.post("/upload_post",upload_post)
 router.post("/view_post",view_post)
+router.get("/user1",user1)
+router.get("/user2",user2)
+router.get("/user3",user3)
+router.get("/user4",user4)
 
 
 module.exports = router;

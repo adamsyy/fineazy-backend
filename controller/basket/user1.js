@@ -3,40 +3,82 @@ const Userschema = require("../../model/user");
 
 
 
-module.exports.friends = async (req, res) => {
+module.exports.user1 = async (req, res) => {
 
     var user1 = {
         "name": "Abdul malik",
-        "invested_value": "2429",
-        "overall_gain": "19",
-        "one_day_gain": "8"
+      
+        "total_amount": "00.00430549",
+    "invested_amount": "0.00430549",
+    "0": {
+        "name": "BNBBUSD",
+        "price": "0.00430549",
+        "allocation": 100,
+        "percentage_change": "0.513"
+    },
+    
 
 
     }
-    var user2= {
-        "name": "sreejith ks ",
-        "invested_value": "4459",
-        "overall_gain": "9",
-        "one_day_gain": "23,"
+
+
+    var user2 = {
+        "name": "sreejith ks",
+      
+        "total_amount": "4459",
+    "invested_amount": "4459",
+    "0": {
+        "name": "ETHBUSD",
+        "price": "0.00430549",
+        "allocation": 100,
+        "percentage_change": "0.513"
+    },
+    
 
 
     }
+
     var user3 = {
         "name": "Rosh roy",
-        "invested_value": "2988",
-        "overall_gain": "39",
-        "one_day_gain": "18,"
+      
+        "total_amount": "2988",
+    "invested_amount": "2988",
+    "0": {
+        "name": "DOGEBUSD",
+        "price": "0.00430549",
+        "allocation": 10,
+        "percentage_change": "0.513"
+    },
+    "1": {
+        "name": "ETHBUSD",
+        "price": "4.30549",
+        "allocation": 90,
+        "percentage_change": "1.513"
+    },
+    
 
 
     }
+
     var user4 = {
         "name": "bijoy babu",
-        "invested_value": "377",
-        "overall_gain": "9",
-        "one_day_gain": "13,"
+      
+        "total_amount": "3500",
+    "invested_amount": "2988",
+ 
+    "0": {
+        "name": "ETHBUSD",
+        "price": "9.30549",
+        "allocation": 100,
+        "percentage_change": "1.513"
+    },
+    
 
 
     }
+
+  
+  
     res.send([user1,user2,user3,user4])
 
 }
