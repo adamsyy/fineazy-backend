@@ -14,7 +14,7 @@ module.exports.friends = async (req, res) => {
 
     }
     var user2= {
-        "name": "Hardik ",
+        "name": "sreejith ks ",
         "invested_value": "4459",
         "overall_gain": "9",
         "one_day_gain": "23,"
@@ -30,7 +30,7 @@ module.exports.friends = async (req, res) => {
 
     }
     var user4 = {
-        "name": "Sachin pandey",
+        "name": "bijoy babu",
         "invested_value": "377",
         "overall_gain": "9",
         "one_day_gain": "13,"
