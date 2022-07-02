@@ -121,6 +121,6 @@ res.send({"coin_prices_json":coin,
 
 "total_amount":total_price,
 "invested_amount":total_price- not_invested_value,
-"sum_percentage":sum_percentage.substring(1),
+"sum_percentage":sum_percentage.substring,
 });
 }
