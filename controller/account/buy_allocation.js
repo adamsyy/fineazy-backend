@@ -4,11 +4,11 @@ const axios = require('axios');
 const path = require("path");
 const UserSchema = require("../../model/user"); 
 dotenv.config({ path: path.join(__dirname, "config.env") });
-
+var CircularJSON = require('circular-json');
 
 
 module.exports.buy_allocation = async (req, res) => {
-  try{
+
     // const user=await UserSchema.findOne({email:req.body.email});
  
 
@@ -17,13 +17,16 @@ module.exports.buy_allocation = async (req, res) => {
     //     apiSecret: user.apisecret,
     //        getTime:()=> new client.time()
     //     })
-
-        const res = await axios.get('https://fineazy-backend.herokuapp.com/getprice/home');
-        res.send(res);
+try{
+    var response = await axios.get('https://fineazy-backend.herokuapp.com/getprice/buy_btc');
+    const str = CircularJSON.stringify(response);
+    res.send(JSON.parse(str)["data"]);
+}catch(e){
+res.send("not enough balance")
+}
+       
     
-  }catch(e){
-    res.send(e)
-  }
+ 
 
 
 }

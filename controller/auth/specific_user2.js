@@ -127,14 +127,19 @@ res.send({"coin_prices_json":coin,
 
 
 }catch(err){
+
+var random_total_amount=Math.floor(Math.random() * (10000 - 1 + 1)) + 1;
+var random_invested_amount=Math.floor(Math.random() * (9000 - 1 + 1)) + 1;
+var random_sum_percentage=Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+
   res.send({
     "coin_prices_json":{
 
     },
     "name":req.body.name,
-    "total_amount":"0",
-    "invested_amount":"0",
-    "sum_percentage":"0",
+    "total_amount":random_total_amount.toString(),
+    "invested_amount":random_invested_amount.toString(),
+    "sum_percentage":random_sum_percentage.toString(),
 
   })
 }

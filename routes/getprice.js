@@ -43,7 +43,7 @@ router.post("/users_basket",users_basket)
 router.post("/users_portfolio",users_portfolio)
 router.post("/buy_btc",buy_btc)
 router.post("/buy_eth",buy_eth)
-router.post("/buy_allocation",buy_allocation)
+router.get("/buy_allocation",buy_allocation)
 
 
 module.exports = router;
