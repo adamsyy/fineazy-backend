@@ -61,7 +61,7 @@ for(var i=0;i<coin_names.length;i++){
     if(coin_names[i].includes("USDT")){
         not_invested_value=not_invested_value+coin_prices[i];
     }
- 
+    const coin_percentage=await client.dailyStats({ symbol: coin_names[i] });
     const  coin_percentage_change=coin_percentage["priceChangePercent"];
     sum_percentage=sum_percentage+coin_percentage_change;
     coin[i]={
