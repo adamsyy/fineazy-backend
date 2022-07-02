@@ -33,7 +33,9 @@ for(var i=0;i<balances_Data.length;i++){
 }
 var ar=[]
 
-
+for(var i=0;i<coin_names.length;i++){
+    coin_names[i]=coin_names[0]+"BUSD";
+}
 //calculate total price
 var total_price=0;
 for(var i=0;i<coin_prices.length;i++){
@@ -44,8 +46,8 @@ for(var i=0;i<coin_names.length;i++){
     ar.push({
         name:coin_names[i],
         price:coin_prices[i],
-        percentage:coin_prices[i]/total_price*0.34,
-        allocation:coin_prices[i]/total_price*100
+        percentage:"50",
+        allocation:"50"
     })
 }
 res.send({ar,"overall_gain":"0.00045","one_day_gain":"0.0085","invested_value":total_price});
