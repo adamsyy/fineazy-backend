@@ -13,7 +13,9 @@ try{
     user[0]["followers"]=user[0]["followers"]+1;
     await user[0].save();
     }
-
+    var followed_Friend=await Userschema.findOne({name:req.body.friend});
+    followed_Friend["followers"]=followed_Friend["followers"]+1;
+   followed_Friend.save();
    
        //add names to user.friends
       // var friend=req.body.friend;
