@@ -7,7 +7,7 @@ const Userschema = require("../../model/user");
 
 module.exports.specific_user = async (req, res) => {
 try{
-    const user=await Userschema.findOne({email:req.body.name});
+    const user=await Userschema.findOne({email:req.body.email});
     // const client = Binance({
     //   apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
     //   apiSecret: "JmU2M67eYD9ZqBLMF8JH4R5XPpK8owoZHjkFcnNRFiIyVed87aVh5VuQmx7FHjC8",
