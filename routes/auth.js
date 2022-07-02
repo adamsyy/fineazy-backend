@@ -6,6 +6,7 @@ const {show_not_friends}=require("../controller/auth/show_not_friends")
 const {remove_friend}=require("../controller/auth/remove_friend")
 const {show_people}=require("../controller/auth/show_people")
 const {show_everyone}=require("../controller/auth/show_everyone")
+const {specific_user}=require("../controller/auth/specific_user")
 const router = require("express").Router();
 
 router.post("/signup",signup)
@@ -16,6 +17,7 @@ router.get("/remove_friend",remove_friend)
 router.post("/show_not_friends",show_not_friends)
 router.get("/show_people",show_people)
 router.get("/show_everyone",show_everyone)
+router.post("/specific_user",specific_user)
 
 
 

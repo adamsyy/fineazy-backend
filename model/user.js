@@ -20,8 +20,8 @@ const User = new Schema({
     type:String,
 
   },
-  api_key:String,
-  api_Secret:String,
+  apikey:String,
+  apisecret:String,
   total_balance:{
     type: Number,
     default:0
