@@ -127,7 +127,15 @@ res.send({"coin_prices_json":coin,
 
 
 }catch(err){
-   res.status(400).send("evideo error unde");
+  res.send({
+    "coin_prices_json":{
+
+    },
+    "total_amount":"0",
+    "invested_amount":"0",
+    "sum_percentage":"0",
+
+  })
 }
 ;
 }
