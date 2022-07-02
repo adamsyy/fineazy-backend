@@ -1,4 +1,8 @@
 {
+  "engines":{
+    "node":"16.15.1"
+
+  },
   "name": "fin_easzy_backend",
   "version": "1.0.0",
   "description": "",
