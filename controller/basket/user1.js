@@ -8,7 +8,7 @@ module.exports.user1 = async (req, res) => {
     var user1 = {
         "name": "Abdul malik",
       
-        "total_amount": "00.00430549",
+        "total_amount": "23",
     "invested_amount": "0.00430549",
     "0": {
         "name": "BNBBUSD",
@@ -25,7 +25,7 @@ module.exports.user1 = async (req, res) => {
     var user2 = {
         "name": "sreejith ks",
       
-        "total_amount": "4459",
+        "total_amount": "12",
     "invested_amount": "4459",
     "0": {
         "name": "ETHBUSD",
@@ -41,7 +41,7 @@ module.exports.user1 = async (req, res) => {
     var user3 = {
         "name": "Rosh roy",
       
-        "total_amount": "2988",
+        "total_amount": "1",
     "invested_amount": "2988",
     "0": {
         "name": "DOGEBUSD",
@@ -63,7 +63,7 @@ module.exports.user1 = async (req, res) => {
     var user4 = {
         "name": "bijoy babu",
       
-        "total_amount": "3500",
+        "total_amount": "26",
     "invested_amount": "2988",
  
     "0": {
