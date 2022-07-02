@@ -12,7 +12,7 @@ module.exports.getpricehome = async (req, res) => {
       symbol: 'BNBUSDT'
     })
     const BTCUSDT = await client.dailyStats({
-      symbol: 'BTCUSDT'
+      symbol: 'BTCUSDT' 
     })
     const ETHUSDT = await client.dailyStats({
       symbol: 'ETHUSDT'
