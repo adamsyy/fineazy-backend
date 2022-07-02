@@ -6,7 +6,7 @@ const Userschema = require("../../model/user");
 
 
 module.exports.specific_user2 = async (req, res) => {
-try{
+
     const user=await Userschema.findOne({name:req.body.name});
     // const client = Binance({
     //   apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
@@ -25,6 +25,7 @@ try{
 const all_Data=await client.accountInfo();
 
 balances_Data=all_Data["balances"];
+console.log(balances_Data);
 for(var i=0;i<balances_Data.length;i++){
     if(balances_Data[i]["free"]>0){
        coin_names.push(balances_Data[i]["asset"]);
@@ -32,6 +33,7 @@ for(var i=0;i<balances_Data.length;i++){
     }
 
 }
+
 for(var i=0;i<coin_names.length;i++){
     coin_names[i]=coin_names[0]+"BUSD";
 }
@@ -128,26 +130,6 @@ res.send({"coin_prices_json":coin,
 })
 
 
-}catch(err){
 
-var random_total_amount=Math.floor(Math.random() * (10000 - 1 + 1)) + 1;
-var random_invested_amount=Math.floor(Math.random() * (9000 - 1 + 1)) + 1;
-var random_sum_percentage=Math.floor(Math.random() * (10 - 1 + 1)) + 1;
-var random_followers=Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-var random_following=Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-
-  res.send({
-    "coin_prices_json":{
-
-    },
-    "name":req.body.name,
-    "total_amount":random_total_amount.toString(),
-    "invested_amount":random_invested_amount.toString(),
-    "sum_percentage":random_sum_percentage.toString(),
-    "followers":random_followers.toString(),
-    "following":random_following.toString(),
-
-  })
-}
 ;
 }
