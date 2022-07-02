@@ -19,8 +19,17 @@ for(var i=0;i<friends.length;i++){
     not_friends.splice(not_friends.indexOf(friends[i]),1);
    
 }
+var users_json=[];
+
+for(var i=0;i<not_friends.length;i++){
+    if(not_friends[i]!=user["name"]){
+        var temp_user=await Userschema.findOne({name:not_friends[i]});
+        users_json.push(temp_user);
+    }
+   
+}
 
 
 
-   res.send(not_friends) 
+   res.send(users_json) 
 }

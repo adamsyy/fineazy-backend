@@ -11,14 +11,29 @@ const User = new Schema({
   friends: {
     type: [String],
   },
-  followers: Number,
+  followers:{
+    type: Number,
+    default:0
+  },
 
-  name: String,
+  name:{
+    type:String,
+
+  },
   api_key:String,
-  api_secret:String,
-  total_balance:Number,
-  total_profit:Number,
-  percentage:Number,
+  api_Secret:String,
+  total_balance:{
+    type: Number,
+    default:0
+  },
+  total_profit:{
+    type: Number,
+    default:0
+  },
+  percentage:{
+    type: Number,
+    default:0
+  },
 
 });
 
