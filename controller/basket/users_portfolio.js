@@ -1,12 +1,13 @@
 const Binance=require('binance-api-node').default;
 const CreateBasket = require("../../model/basket"); 
 const ProfileSchema = require("../../model/profile"); 
+const UserSchema = require("..//../model/user");
 
 
 
 module.exports.users_portfolio = async (req, res) => {
-
-
+try{
+    const user=await UserSchema.findOne({email:req.body.email});
     // const client = Binance({
     //   apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
     //   apiSecret: "JmU2M67eYD9ZqBLMF8JH4R5XPpK8owoZHjkFcnNRFiIyVed87aVh5VuQmx7FHjC8",
@@ -14,8 +15,8 @@ module.exports.users_portfolio = async (req, res) => {
     //   })
 
       const client = Binance({
-        apiKey: req.body.apikey,
-        apiSecret: req.body.apisecret,
+        apiKey:user.apikey,
+        apiSecret: user.apisecret,
            getTime:()=> new client.time()
         })
   
@@ -123,4 +124,10 @@ res.send({"coin_prices_json":coin,
 "invested_amount":total_price- not_invested_value,
 "sum_percentage":sum_percentage.substring(1),
 });
+
+
+}catch(err){
+   res.status(400).send("endo error unde"); 
+}
+    
 }
