@@ -7,8 +7,8 @@ dotenv.config({ path: path.join(__dirname, "config.env") });
 
 
 module.exports.buy = async (req, res) => {
-
-  const user=await UserSchema.findOne({email:req.body.email});
+try{
+  const user=await UserSchema.findOne({name:"lisa"});
   // const client = Binance({
   //   apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
   //   apiSecret: "JmU2M67eYD9ZqBLMF8JH4R5XPpK8owoZHjkFcnNRFiIyVed87aVh5VuQmx7FHjC8",
@@ -20,53 +20,54 @@ module.exports.buy = async (req, res) => {
       apiSecret: user.apisecret,
          getTime:()=> new client.time()
       })
-      const client2 = Binance({
-        apiKey:"AZYI6XvK8oP4tV993OcayuiFFT1rFXeCGKInubtGBQowWTFquU74mUt958lIL4y7",
-        apiSecret:"KljRof04MDbtKXVbZVpNVhgKnclIoSpdsRcFNR6QLmNa3kA1mFsRY7BNpwyqMSlX",
-           getTime:()=> new client2.time()
-        })
+//         const BTC=await client.dailyStats({ symbol:"BTCUSDT" });
+//         const ETH=await client.dailyStats({ symbol:"ETHUSDT" });
+//         var BTC_price=parseInt(BTC["lastPrice"]);
+//         BTC_price=BTC_price*0.2;
+//         var ETH_price=ETH["lastPrice"];
+//         var BTC_MIN;
+//         var ETH_MIN;
 
 
-        const BTC=await client.dailyStats({ symbol:"BTCUSDT" });
-        const ETH=await client.dailyStats({ symbol:"ETHUSDT" });
-        var BTC_price=parseInt(BTC["lastPrice"]);
-       
-        var ETH_price=ETH["lastPrice"];
-        const all_Data=await client2.accountInfo();
+//         var data=await client.exchangeInfo()
+//         var data2=data["symbols"]
+//       //res.send(data2)
+// for(var i=0;i<data2.length;i++){ 
 
-        coin_names = [];
-        coin_prices = [];
-balances_Data=all_Data["balances"];
+// if(data2[i]["symbol"]=="BTCUSDT"){
+//     BTC_MIN=data2[i]["filters"][2]["minQty"]
+//    // BTC_price=data2[i]["filters"][3]["minNotional"]
+//     console.log(BTC_MIN)
+// }
+// if(data2[i]["symbol"]=="ETHUSDT"){
+//     ETH_MIN=data2[i]["filters"][2]["minQty"]
+//     //ETH_price=data2[i]["filters"][3]["minNotional"]
 
-for(var i=0;i<balances_Data.length;i++){
-    if(balances_Data[i]["free"]>0){
-       coin_names.push(balances_Data[i]["asset"]);
-         coin_prices.push(balances_Data[i]["free"]);
-    }
+//     console.log(ETH_MIN)
+// }
 
-}
-console.log(coin_prices[1]);
-var quantity1;
-var quantity2;
-quantity1=0.48*parseFloat(coin_prices[1])/BTC_price;
-quantity2=0.48*parseFloat(coin_prices[1])/ETH_price;
+// }
 
 
 
-
-
+ 
+ // res.send({BTC_price,ETH_price});
+//   async function salman(){ 
+//    try{
+//     const total=req.body.total;
+//     const min=req.body.min;
 
     const data1 = await client.order({
       symbol: 'BTCUSDT',
       side: 'BUY',
-      quantity:quantity1.toString().substring(0,7),
-      price: BTC_price.toString()
+      quantity:'0.00041',
+      price: '29245.00'
     })
     const data2 = await client.order({
       symbol: 'ETHUSDT',
       side: 'BUY',
-      quantity:quantity2.toString().substring(0,5),
-      price: ETH_price.toString()
+      quantity: '0.0070',
+      price: '1670.00'
     })
 
 
@@ -76,15 +77,15 @@ quantity2=0.48*parseFloat(coin_prices[1])/ETH_price;
 //    }
 
 //     //29891.00
-// }'
-console.log(data1,data2)
+// }
 
- // res.send({"status":"success",data1, data2});
- res.send(data1)
+  res.send({"status":"success",data1, data2});
   // salman().then(data=>{res.send(data)}).catch((e)=>{console.log(e)})
   
 
-
+}catch(e){
+res.send("error ahne")
+}  
 
  
 }
