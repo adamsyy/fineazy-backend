@@ -1,6 +1,6 @@
 
 // const Binance=require('binance-api-node').default;
-const Postschema = require("../../model/Post"); 
+const Postschema = require("../../model/post"); 
 const Userschema = require("../../model/user");
 
 
