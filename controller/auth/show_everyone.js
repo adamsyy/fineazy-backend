@@ -3,7 +3,7 @@ const Userschema = require("../../model/user");
 
 
 
-module.exports.show_people = async (req, res) => {
+module.exports.show_everyone = async (req, res) => {
 
     const people=await Userschema.find();
 
