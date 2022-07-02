@@ -123,6 +123,8 @@ res.send({"coin_prices_json":coin,
 "total_amount":total_price,
 "invested_amount":total_price- not_invested_value,
 "sum_percentage":sum_percentage.substring,
+"followers":user.followers.toString(),
+"following":user.friends.length.toString()
 })
 
 
@@ -131,6 +133,8 @@ res.send({"coin_prices_json":coin,
 var random_total_amount=Math.floor(Math.random() * (10000 - 1 + 1)) + 1;
 var random_invested_amount=Math.floor(Math.random() * (9000 - 1 + 1)) + 1;
 var random_sum_percentage=Math.floor(Math.random() * (10 - 1 + 1)) + 1;
+var random_followers=Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+var random_following=Math.floor(Math.random() * (6 - 1 + 1)) + 1;
 
   res.send({
     "coin_prices_json":{
@@ -140,6 +144,8 @@ var random_sum_percentage=Math.floor(Math.random() * (10 - 1 + 1)) + 1;
     "total_amount":random_total_amount.toString(),
     "invested_amount":random_invested_amount.toString(),
     "sum_percentage":random_sum_percentage.toString(),
+    "followers":random_followers.toString(),
+    "following":random_following.toString(),
 
   })
 }
