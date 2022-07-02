@@ -13,7 +13,7 @@ try{
     user[0]["followers"]=user[0]["followers"]+1;
     await user[0].save();
     }
- 
+
    
        //add names to user.friends
       // var friend=req.body.friend;
