@@ -7,7 +7,7 @@ dotenv.config({ path: path.join(__dirname, "config.env") });
 
 
 module.exports.buy = async (req, res) => {
-try{
+
   const user=await UserSchema.findOne({name:"lisa"});
   // const client = Binance({
   //   apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
@@ -60,14 +60,14 @@ try{
     const data1 = await client.order({
       symbol: 'BTCUSDT',
       side: 'BUY',
-      quantity:'0.00041',
-      price: '29245.00'
+      quantity:'0.00061',
+      price: '19261.30'
     })
     const data2 = await client.order({
       symbol: 'ETHUSDT',
       side: 'BUY',
-      quantity: '0.0070',
-      price: '1670.00'
+      quantity: '0.0110',
+      price: '1066.10'
     })
 
 
@@ -83,9 +83,6 @@ try{
   // salman().then(data=>{res.send(data)}).catch((e)=>{console.log(e)})
   
 
-}catch(e){
-res.send("error ahne")
-}  
 
  
 }
