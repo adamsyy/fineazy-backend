@@ -14,6 +14,7 @@ const {buy_btc}=require("../controller/account/buy_btc")
 const {buy_eth}=require("../controller/account/buy_eth")
 const {buy_allocation}=require("../controller/account/buy_allocation")
 const {upload_post}=require("../controller/account/upload_post")
+const {view_post}=require("../controller/account/view_post")
 
 const router = require("express").Router();
 const {signup}=require("../controller/auth/signup")
@@ -46,6 +47,7 @@ router.post("/buy_btc",buy_btc)
 router.post("/buy_eth",buy_eth)
 router.get("/buy_allocation",buy_allocation)
 router.post("/upload_post",upload_post)
+router.post("/view_post",view_post)
 
 
 module.exports = router;
