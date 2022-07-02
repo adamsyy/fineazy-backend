@@ -10,6 +10,7 @@ const {specific_user}=require("../controller/auth/specific_user")
 const {specific_user2}=require("../controller/auth/specific_user2")
 const {test}=require("../controller/auth/test")
 const {friends}=require("../controller/auth/friends")
+const {lisa}=require("../controller/auth/lisa")
 const router = require("express").Router();
 
 router.post("/signup",signup)
@@ -23,6 +24,7 @@ router.get("/show_everyone",show_everyone)
 router.post("/specific_user",specific_user)
 router.post("/specific_user2",specific_user2)
 router.get("/friends",friends)
+router.get("/lisa",lisa)    
 
 
 
