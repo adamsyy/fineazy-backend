@@ -57,7 +57,7 @@ module.exports.getpricehome = async (req, res) => {
       },
       "4":
       {
-        "name": data["DOGEUSDT"],
+        "name": "DOGEUSDT",
         "price": data["DOGEUSDT"],
         "priceChangePercent": DOGEUSDT["priceChangePercent"],
         "priceChange": DOGEUSDT["priceChange"],
