@@ -22,63 +22,63 @@ module.exports.user1 = async (req, res) => {
     }
 
 
-    var user2 = {
-        "name": "sreejith ks",
+    // var user2 = {
+    //     "name": "sreejith ks",
       
-        "total_amount": "12",
-    "invested_amount": "4459",
-    "0": {
-        "name": "ETHBUSD",
-        "price": "0.00430549",
-        "allocation": 100,
-        "percentage_change": "0.513"
-    },
+    //     "total_amount": "12",
+    // "invested_amount": "4459",
+    // "0": {
+    //     "name": "ETHBUSD",
+    //     "price": "0.00430549",
+    //     "allocation": 100,
+    //     "percentage_change": "0.513"
+    // },
     
 
 
-    }
+    // }
 
-    var user3 = {
-        "name": "Rosh roy",
+    // var user3 = {
+    //     "name": "Rosh roy",
       
-        "total_amount": "1",
-    "invested_amount": "2988",
-    "0": {
-        "name": "DOGEBUSD",
-        "price": "0.00430549",
-        "allocation": 10,
-        "percentage_change": "0.513"
-    },
-    "1": {
-        "name": "ETHBUSD",
-        "price": "4.30549",
-        "allocation": 90,
-        "percentage_change": "1.513"
-    },
+    //     "total_amount": "1",
+    // "invested_amount": "2988",
+    // "0": {
+    //     "name": "DOGEBUSD",
+    //     "price": "0.00430549",
+    //     "allocation": 10,
+    //     "percentage_change": "0.513"
+    // },
+    // "1": {
+    //     "name": "ETHBUSD",
+    //     "price": "4.30549",
+    //     "allocation": 90,
+    //     "percentage_change": "1.513"
+    // },
     
 
 
-    }
+    // }
 
-    var user4 = {
-        "name": "bijoy babu",
+    // var user4 = {
+    //     "name": "bijoy babu",
       
-        "total_amount": "26",
-    "invested_amount": "2988",
+    //     "total_amount": "26",
+    // "invested_amount": "2988",
  
-    "0": {
-        "name": "ETHBUSD",
-        "price": "9.30549",
-        "allocation": 100,
-        "percentage_change": "1.513"
-    },
+    // "0": {
+    //     "name": "ETHBUSD",
+    //     "price": "9.30549",
+    //     "allocation": 100,
+    //     "percentage_change": "1.513"
+    // },
     
 
 
-    }
+    // }
 
   
   
-    res.send([user1,user2,user3,user4])
+    res.send([user1])
 
 }
