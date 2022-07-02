@@ -32,6 +32,7 @@ module.exports.getpricehome = async (req, res) => {
         "price": data["BNBUSDT"],
         "priceChangePercent": BNBUSDT["priceChangePercent"],
         "priceChange": BNBUSDT["priceChange"],
+        "volume": BNBUSDT["volume"],
       },
 
       "1": {
@@ -40,6 +41,7 @@ module.exports.getpricehome = async (req, res) => {
         "price": data["BTCUSDT"],
         "priceChangePercent": BTCUSDT["priceChangePercent"],
         "priceChange": BTCUSDT["priceChange"],
+        "volume": BTCUSDT["volume"],
       },
       "2":
       {
@@ -47,6 +49,7 @@ module.exports.getpricehome = async (req, res) => {
         "price": data["ETHUSDT"],
         "priceChangePercent": ETHUSDT["priceChangePercent"],
         "priceChange": ETHUSDT["priceChange"],
+        "volume": ETHUSDT["volume"],
       },
       "3":
       {
@@ -54,6 +57,7 @@ module.exports.getpricehome = async (req, res) => {
         "price": data["SOLUSDT"],
         "priceChangePercent": SOLUSDT["priceChangePercent"],
         "priceChange": SOLUSDT["priceChange"],
+        "volume": SOLUSDT["volume"],
       },
       "4":
       {
@@ -61,6 +65,7 @@ module.exports.getpricehome = async (req, res) => {
         "price": data["DOGEUSDT"],
         "priceChangePercent": DOGEUSDT["priceChangePercent"],
         "priceChange": DOGEUSDT["priceChange"],
+        "volume": DOGEUSDT["volume"],
       },
 
 
