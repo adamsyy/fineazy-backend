@@ -62,7 +62,7 @@ module.exports.buy_btc = async (req, res) => {
         side: 'BUY',
         quantity:'0.00041',
         price: '29245.00'
-      })
+      });
     //   const data2 = await client.order({
     //     symbol: 'ETHUSDT',
     //     side: 'BUY',
