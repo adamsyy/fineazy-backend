@@ -119,7 +119,7 @@ var test= parseInt(data[coin_names[0]]);
 //   )
 
 res.send({"coin_prices_json":coin,
-
+"name":req.body.name,
 "total_amount":total_price,
 "invested_amount":total_price- not_invested_value,
 "sum_percentage":sum_percentage.substring,
@@ -131,6 +131,7 @@ res.send({"coin_prices_json":coin,
     "coin_prices_json":{
 
     },
+    "name":req.body.name,
     "total_amount":"0",
     "invested_amount":"0",
     "sum_percentage":"0",
