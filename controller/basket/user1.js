@@ -22,17 +22,17 @@ module.exports.user1 = async (req, res) => {
     }
 
 
-    // var user2 = {
-    //     "name": "sreejith ks",
+    var user2 = {
+        "name": "sreejith ks",
       
-    //     "total_amount": "12",
-    // "invested_amount": "4459",
-    // "0": {
-    //     "name": "ETHBUSD",
-    //     "price": "0.00430549",
-    //     "allocation": 100,
-    //     "percentage_change": "0.513"
-    // },
+        "total_amount": "12",
+    "invested_amount": "4459",
+    "0": {
+        "name": "ETHBUSD",
+        "price": "0.00430549",
+        "allocation": 100,
+        "percentage_change": "0.513"
+    },
     
 
 
@@ -75,10 +75,10 @@ module.exports.user1 = async (req, res) => {
     
 
 
-    // }
+    }
 
   
   
-    res.send([user1])
+    res.send([user1,user2])
 
 }
