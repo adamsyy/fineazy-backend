@@ -28,7 +28,7 @@ for(var i=0;i<not_friends.length;i++){
     }
    
 }
-
+//
 
 
    res.send(users_json) 
