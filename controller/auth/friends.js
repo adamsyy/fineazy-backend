@@ -9,7 +9,7 @@ module.exports.friends = async (req, res) => {
         "name": "Abdul malik",
         "invested_value": "2429",
         "overall_gain": "19",
-        "one_day_gain": "8,"
+        "one_day_gain": "8"
 
 
     }
@@ -17,7 +17,7 @@ module.exports.friends = async (req, res) => {
         "name": "sreejith ks ",
         "invested_value": "4459",
         "overall_gain": "9",
-        "one_day_gain": "23,"
+        "one_day_gain": "23"
 
 
     }
@@ -25,7 +25,7 @@ module.exports.friends = async (req, res) => {
         "name": "Rosh roy",
         "invested_value": "2988",
         "overall_gain": "39",
-        "one_day_gain": "18,"
+        "one_day_gain": "18"
 
 
     }
@@ -33,7 +33,7 @@ module.exports.friends = async (req, res) => {
         "name": "bijoy babu",
         "invested_value": "377",
         "overall_gain": "9",
-        "one_day_gain": "13,"
+        "one_day_gain": "13"
 
 
     }
