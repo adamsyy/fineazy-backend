@@ -4,8 +4,7 @@ const Userschema = require("../../model/user");
 
 
 module.exports.show_not_friends = async (req, res) => {
-
-    const users=await Userschema.find();
+try{    const users=await Userschema.find();
     var not_friends=[];
     const user=await Userschema.findOne({email:req.body.email});
     const friends=user["friends"]
@@ -27,7 +26,11 @@ for(var i=0;i<not_friends.length;i++){
         users_json.push(temp_user);
     }
    
+}}catch(e){
+    console.log(e);
+    res.status(500).send("error");
 }
+
 //
 
 
