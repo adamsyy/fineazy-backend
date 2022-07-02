@@ -1,6 +1,6 @@
 
 // const Binance=require('binance-api-node').default;
-const Postschema = require("../../model/Post"); 
+const PostSchema = require("../../model/post"); 
 const Userschema = require("../../model/user");
 
 
@@ -10,7 +10,7 @@ try{
 
     const user=await Userschema.findOne({email:req.body.email});
 
-    var post=new Postschema({
+    var post=new PostSchema({
 name:user.name,
 description:req.body.description,
 
