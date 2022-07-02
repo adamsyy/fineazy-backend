@@ -22,7 +22,7 @@ module.exports.buy_allocation = async (req, res) => {
         res.send(res);
     
   }catch(e){
-    res.send("error ahne")
+    res.send(e)
   }
 
 
