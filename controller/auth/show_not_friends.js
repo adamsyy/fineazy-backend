@@ -22,7 +22,7 @@ var users_json=[];
 
 for(var i=0;i<not_friends.length;i++){
     if(not_friends[i]!=user["name"]){
-        var temp_user=await Userschema.findOne({name:not_friends[i]},{api_key:0,api_Secret:0,password:0});
+        var temp_user=await Userschema.findOne({name:not_friends[i]},{apikey:0,apisecret:0,password:0});
         users_json.push(temp_user);
     }
    
