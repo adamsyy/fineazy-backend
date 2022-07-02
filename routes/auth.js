@@ -22,7 +22,7 @@ router.post("/show_people",show_people)
 router.get("/show_everyone",show_everyone)
 router.post("/specific_user",specific_user)
 router.post("/specific_user2",specific_user2)
-router.post("/friends",friends)
+router.get("/friends",friends)
 
 
 
