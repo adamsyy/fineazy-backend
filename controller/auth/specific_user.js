@@ -7,7 +7,7 @@ const Userschema = require("../../model/user");
 
 module.exports.specific_user = async (req, res) => {
 try{
-    const user=await Userschema.findOne({email:req.body.email});
+    const user=await Userschema.findOne({email:req.body.name});
     // const client = Binance({
     //   apiKey: "aYzZOAeym4hX76k6jMogk7mhJNYnywZuAI6jl7Mii89DzrMAw4B6vv9NvU1aU9fu",
     //   apiSecret: "JmU2M67eYD9ZqBLMF8JH4R5XPpK8owoZHjkFcnNRFiIyVed87aVh5VuQmx7FHjC8",
@@ -61,7 +61,7 @@ for(var i=0;i<coin_names.length;i++){
     if(coin_names[i].includes("USDT")){
         not_invested_value=not_invested_value+coin_prices[i];
     }
-    const coin_percentage=await client.dailyStats({ symbol: coin_names[i] });
+ 
     const  coin_percentage_change=coin_percentage["priceChangePercent"];
     sum_percentage=sum_percentage+coin_percentage_change;
     coin[i]={
