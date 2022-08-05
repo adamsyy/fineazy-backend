@@ -34,6 +34,7 @@ const client = Binance()
 app.use(cors())
 app.use("/getprice", require("./routes/getprice"));
 app.use("/auth", require("./routes/auth"));
+app.use("/test", require("./routes/testing/test"));
 
 
 const PORT = process.env.PORT || 5000;
