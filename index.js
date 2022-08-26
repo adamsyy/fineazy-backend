@@ -32,6 +32,9 @@ const client = Binance()
 // }
 // salman().then(data=>{console.log(data)}).catch((e)=>{console.log(e)})
 app.use(cors())
+app.use('/',(req,res)=>{
+res.send("backend is up and running")
+})
 app.use("/getprice", require("./routes/getprice"));
 app.use("/auth", require("./routes/auth"));
 app.use("/test", require("./routes/testing/test"));
